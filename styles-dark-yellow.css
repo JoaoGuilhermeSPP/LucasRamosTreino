@@ -1,0 +1,210 @@
+/* ============================================
+   LANDING PAGE - LUCAS RAMOS
+   Dark Theme (Black Opaco + Yellow)
+   Versão FINAL – CSS COMPLETO
+   ============================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* Colors */
+    --back: #000000;
+    --primary: #ffffff;
+    --primary-light: #1a1a1a;
+    --accent: #ffffff;
+    --accent-dark: #000000;
+    --button-init: #f5c400;
+    --acent-button: #5e5e5e;
+    --text-dark: #f5c400;
+    --text-light: #121213;
+    --text-nav: #ffffff;
+
+    --bg-light: #121212;
+    --bg-white: #0e0e0e;
+    --bg-cref: #f5c400;
+    --border-color: #2a2a2a;
+
+    /* Typography */
+    --font-display: 'Playfair Display', serif;
+    --font-body: 'Inter', sans-serif;
+
+    /* Spacing */
+    --spacing-xs: 0.5rem;
+    --spacing-sm: 1rem;
+    --spacing-md: 1.5rem;
+    --spacing-lg: 2rem;
+    --spacing-xl: 3rem;
+    --spacing-2xl: 4rem;
+
+    /* Shadows */
+    --shadow-sm: 0 2px 6px rgba(0,0,0,0.6);
+    --shadow-md: 0 6px 16px rgba(0,0,0,0.7);
+    --shadow-lg: 0 12px 32px rgba(0,0,0,0.8);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-body);
+    color: var(--text-light);
+    background-color: var(--back);
+    line-height: 1.6;
+}
+
+/* HEADER / NAV */
+
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background-color: #383737;
+    box-shadow: var(--shadow-sm);
+}
+
+.header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: var(--spacing-md);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    color: var(--accent);
+    text-decoration: none;
+}
+
+.nav {
+    display: flex;
+    gap: var(--spacing-md);
+}
+
+.nav-link {
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.nav-link:hover {
+    color: var(--accent);
+}
+
+.btn-nav {
+    border: 2px solid var(--accent);
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    color: var(--primary);
+}
+
+.btn-nav:hover {
+    background-color: var(--text-nav);
+    color: #000;
+}
+
+/* HERO */
+
+.hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-xl);
+    align-items: center;
+    padding: var(--spacing-xl);
+    max-width: 1200px;
+    margin: auto;
+}
+
+.hero-title {
+    font-family: var(--font-display);
+    font-size: 3rem;
+    color: var(--accent);
+}
+
+.hero-subtitle {
+    color: #ccc;
+}
+
+
+/* BUTTONS */
+
+.btn {
+    padding: 1rem 2rem;
+    border-radius: 20px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-primary,
+.btn-secondary {
+    background-color: var(--acent-button);
+    color: #ffffff;
+}
+
+.btn-primary:hover {
+    background-color: var(--button-init);
+}
+.btn-secondary:hover {
+    background-color: var(--accent-dark);
+}
+
+/* SECTIONS */
+
+.sobre,
+.redes-sociais,
+.formulario-section {
+    background-color: var(--bg-light);
+}
+
+/* CARDS */
+
+.servico-card,
+.social-link,
+.formulario {
+    background-color: #ebc909;
+    color: var(--text-light);
+}
+
+/* FOOTER */
+
+.footer {
+    background-color: #000;
+    color: #ccc;
+}
+
+.footer h4 {
+    color: var(--accent);
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 768px) {
+    .hero {
+        grid-template-columns: 1fr;
+        padding: var(--spacing-lg);
+    }
+
+    .btn {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .header-content {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .hero-title {
+        font-size: 2rem;
+    }
+}
