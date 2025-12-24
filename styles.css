@@ -543,6 +543,14 @@ body {
     }
 }
 @media (max-width: 768px) {
+    .hero::before {
+        background-image: url("./Imagens/FundoA.png");
+        background-size: contain;
+        background-position: center top;
+    }
+    .hero {
+        min-height: 100svh; /* corrige mobile browsers */
+    }
     .hero {
         grid-template-columns: 1fr;
         padding: var(--spacing-xl) var(--spacing-md);
@@ -651,4 +659,6 @@ body {
     .footer-content {
         grid-template-columns: 1fr;
     }
+
+    
 }
