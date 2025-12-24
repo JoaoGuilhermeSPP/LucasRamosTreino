@@ -626,6 +626,11 @@ body {
     .formulario {
         padding: var(--spacing-lg);
     }
+
+    .btn {
+        font-size: 1.2rem; /* Ajuste para telas menores */
+        padding: var(--spacing-sm) var(--spacing-md);
+    }
 }
 
 @media (max-width: 480px) {
@@ -660,5 +665,8 @@ body {
         grid-template-columns: 1fr;
     }
 
-    
+    .btn {
+        font-size: 1rem; /* Ajuste para telas muito pequenas */
+        padding: var(--spacing-xs) var(--spacing-sm);
+    }
 }

@@ -195,6 +195,8 @@ body {
 
     .btn {
         width: 100%;
+        font-size: 1rem; /* Ajuste para telas menores */
+        padding: 0.8rem 1.5rem;
     }
 }
 
@@ -206,5 +208,9 @@ body {
 
     .hero-title {
         font-size: 2rem;
+    }
+    .btn {
+        font-size: 0.9rem; /* Ajuste para telas muito pequenas */
+        padding: 0.6rem 1rem;
     }
 }
